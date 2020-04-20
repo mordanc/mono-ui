@@ -5,14 +5,12 @@ import { IMonoWindow } from "./types";
 
 export function MonoWindow({
   window,
-  header,
   frames,
 }: {
   window: IMonoWindow;
-  header?: string | JSX.Element;
   frames?: boolean;
 }) {
-  const { colSpan, content } = window;
+  const { colSpan, content , header} = window;
   return (
     <div
       className={`col-span-${colSpan || 1} ${

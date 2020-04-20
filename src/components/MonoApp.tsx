@@ -26,7 +26,7 @@ export function MonoApp({
   });
 
   return (
-    <div className="h-screen bg-greydark w-screen flex text-white">
+    <div className="flex w-screen h-screen text-white bg-greydark">
       {leftSidebar && leftSidebar}
       <div className="flex flex-col w-full">
         {topbar }
