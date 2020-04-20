@@ -2,7 +2,7 @@
   "name": "mono-ui",
   "version": "1.0.2",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "build": "rm -rf dist && npm run tailwind:css && tsc",
     "tailwind:css": "tailwind build src/tailwind.css -c tailwind.config.js -o src/index.css",
@@ -11,9 +11,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "peerDependencies": {
+    "react": "^16.13.1"
+  },
   "devDependencies": {
     "typescript": "^3.8.3"
   },
+  
   "dependencies": {
     "react": "^16.13.1",
     "tailwindcss": "^1.2.0"
