@@ -1,11 +1,11 @@
 import React from "react";
 
 export function MonoSidebar({
-  buttons,
+  children,
   frames,
   additionalStyles,
 }: {
-  buttons: JSX.Element[];
+  children: JSX.Element[];
   frames?: boolean;
   additionalStyles?: string;
 }) {
@@ -16,7 +16,7 @@ export function MonoSidebar({
       } flex flex-col px-4 pt-6 ${additionalStyles}`}
       style={{ minWidth: "225px" }}
     >
-      {buttons}
+      {children}
     </div>
   );
 }
