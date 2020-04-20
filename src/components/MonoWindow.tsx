@@ -5,9 +5,11 @@ import { IMonoWindow } from "./types";
 
 export function MonoWindow({
   window,
+  header,
   frames,
 }: {
   window: IMonoWindow;
+  header?: string | JSX.Element;
   frames?: boolean;
 }) {
   const { colSpan, content } = window;
@@ -17,6 +19,7 @@ export function MonoWindow({
         frames && `border border-white`
       } p-4`}
     >
+      {header}
       <Scrollbars
         style={{ width: "100%", height: "100%" }}
         autohide
