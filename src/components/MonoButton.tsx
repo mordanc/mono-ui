@@ -7,12 +7,14 @@ export function MonoButton({
   rounding,
   textColor,
   additionalTextStyles,
+  additionalStyles,
 }: {
   func: Function;
   text: string;
   disable: boolean;
   rounding?: string;
   textColor?: string;
+  additionalStyles?: string;
   additionalTextStyles?: string;
 }) {
   return (
@@ -24,7 +26,7 @@ export function MonoButton({
           : `hover:bg-greylighter ${
               textColor || "text-white"
             } transition duration-300 ease-in-out`
-      } border border-black p-1 my-1 coolButton cursor-pointer text-center select-none ${rounding}`}
+      } border border-black p-1 my-1 coolButton cursor-pointer text-center select-none ${rounding} ${additionalStyles}`}
     >
       <button className="focus:outline-none" disabled={disable}>
         <span className={`${additionalTextStyles}`}> {text}</span>
