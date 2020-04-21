@@ -4,6 +4,19 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 A composable, dark themed UI Framework specifically designed to work with TailwindCSS.
 
+### Example:
+
+```
+<MonoApp
+    rightSidebar={<SidebarRight />}
+    leftSidebar={<SidebarLeft />}
+    topbar={<Topbar />}
+    contentPanes={screenToShow}
+    mainContentColumns={3}
+    frames={false}
+/>
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
