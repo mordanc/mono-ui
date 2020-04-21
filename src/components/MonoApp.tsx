@@ -27,25 +27,32 @@ export function MonoApp({
 
   return (
     <div className="flex w-screen h-screen text-white bg-greydark">
-      {leftSidebar && leftSidebar}
+      {leftSidebar}
       <div className="flex flex-col w-full">
-        {topbar }
-
-        <div
-          className={`w-full h-full ${
-            frames && `border border-blue-500`
-          } grid grid-cols-1 lg:grid-cols-${
-            mainContentColumns
-              ? mainContentColumns
-              : contentPanes.length >= 4
-              ? Math.floor(contentPanes.length / 2)
-              : contentPanes.length
-          } p-4 gap-4`}
+        {topbar}
+        <Scrollbars
+          style={{ width: "100%", height: "100%" }}
+          autohide
+          autoHideTimeout={1000}
+          autoHideDuration={200}
         >
-          {display}
-        </div>
+          <div
+            className={`w-full h-full ${
+              frames && `border border-blue-500`
+            } grid grid-cols-1 lg:grid-cols-${
+              mainContentColumns
+                ? mainContentColumns
+                : contentPanes.length >= 4
+                ? Math.floor(contentPanes.length / 2)
+                : contentPanes.length
+            } p-4 gap-4`}
+          >
+            {display}
+          </div>
+        </Scrollbars>
       </div>
-      {rightSidebar && rightSidebar}
+
+      {rightSidebar}
     </div>
   );
 }
