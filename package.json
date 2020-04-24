@@ -4,8 +4,8 @@
   "description": "A composable, dark themed UI Framework specifically designed to work with TailwindCSS.",
   "main": "./dist/index.js",
   "scripts": {
-    "build": "rm -rf dist && npm run tailwind:css && webpack",
-    "tailwind:css": "tailwind build src/tailwind.css -c tailwind.config.js -o src/index.css",
+    "build": "rm -rf dist && npm run tailwind:css && webpack --mode production",
+    "tailwind:css": "postcss src/tailwind.css -o src/index.css --env production",
     "prepare": "npm run build"
   },
   "keywords": [],
@@ -15,14 +15,20 @@
     "react": "^16.13.1"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.2",
+    "autoprefixer": "^9.7.6",
+    "css-loader": "^3.5.3",
+    "postcss-cli": "^7.1.0",
+    "postcss-loader": "^3.0.0",
     "source-map-loader": "^0.2.4",
+    "style-loader": "^1.2.0",
     "ts-loader": "^7.0.1",
     "typescript": "^3.8.3",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
-    "react-custom-scrollbars": "^4.2.1"
+    "webpack-cli": "^3.3.11"
   },
   "dependencies": {
+    "@types/react-custom-scrollbars": "^4.0.6",
     "tailwindcss": "^1.2.0"
   }
 }

@@ -2,8 +2,9 @@ import React from "react";
 import { MonoButton } from "./MonoButton";
 import { MonoWindow } from "./MonoWindow";
 import { MonoTopbar } from "./MonoTopbar";
-import { Scrollbars } from "react-custom-scrollbars";
+// import { Scrollbars } from "react-custom-scrollbars";
 import { IMonoWindow } from "./types";
+import '../index.css'
 
 export function MonoApp({
   leftSidebar,
@@ -29,12 +30,11 @@ export function MonoApp({
       {leftSidebar}
       <div className="flex flex-col w-full">
         {topbar}
-        <Scrollbars
+        {/* <Scrollbars
           style={{ width: "100%", height: "100%" }}
-          autohide
           autoHideTimeout={1000}
           autoHideDuration={200}
-        >
+        > */}
           <div
             className={`w-full h-full ${
               frames && `border border-blue-500`
@@ -48,7 +48,7 @@ export function MonoApp({
           >
             {display}
           </div>
-        </Scrollbars>
+        {/* </Scrollbars> */}
       </div>
 
       {rightSidebar}

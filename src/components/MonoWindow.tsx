@@ -1,7 +1,8 @@
 import React from "react";
 // @ts-ignore
-import { Scrollbars } from "react-custom-scrollbars";
+// import { Scrollbars } from "react-custom-scrollbars";
 import { IMonoWindow } from "./types";
+import "../index.css";
 
 export function MonoWindow({
   window,
@@ -10,7 +11,7 @@ export function MonoWindow({
   window: IMonoWindow;
   frames?: boolean;
 }) {
-  const { colSpan, content , header} = window;
+  const { colSpan, content, header } = window;
   return (
     <div
       className={`col-span-${colSpan || 1} ${
@@ -18,14 +19,14 @@ export function MonoWindow({
       } p-4`}
     >
       {header}
-      <Scrollbars
+      {/* <Scrollbars
         style={{ width: "100%", height: "100%" }}
         autohide
         autoHideTimeout={1000}
         autoHideDuration={200}
-      >
-        {content}
-      </Scrollbars>
+      > */}
+      {content}
+      {/* </Scrollbars> */}
     </div>
   );
 }
