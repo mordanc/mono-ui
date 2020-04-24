@@ -2,7 +2,6 @@ import React from "react";
 import { MonoButton } from "./MonoButton";
 import { MonoWindow } from "./MonoWindow";
 import { MonoTopbar } from "./MonoTopbar";
-// @ts-ignore
 import { Scrollbars } from "react-custom-scrollbars";
 import { IMonoWindow } from "./types";
 

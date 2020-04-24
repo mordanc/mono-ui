@@ -30,3 +30,9 @@ your app.
 ```
 
 All components have an `additionalStyles` prop which lets you add styles to their wrapper div.
+
+# TODO
+
+- Fix bundling with tailwindcss/webpack/typescript
+    - maybe just include src bundle with the css in it
+- dynamic width/collapsible side/topbars

@@ -19,7 +19,11 @@ export function MonoButton({
 }) {
   return (
     <div
-      onClick={() => func()}
+      onClick={() => {
+        if (!disable) {
+          func();
+        }
+      }}
       className={`${
         disable
           ? "hover:bg-red-700"
