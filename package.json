@@ -11,9 +11,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "peerDependencies": {
-    "react": "^16.13.1"
-  },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.2",
     "autoprefixer": "^9.7.6",
@@ -29,6 +26,7 @@
   },
   "dependencies": {
     "@types/react-custom-scrollbars": "^4.0.6",
+    "react": "^16.13.1",
     "tailwindcss": "^1.2.0"
   }
 }
