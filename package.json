@@ -2,7 +2,7 @@
   "name": "mono-ui",
   "version": "1.1.11",
   "description": "A composable, dark themed UI Framework specifically designed to work with TailwindCSS.",
-  "main": "./dist/index.js",
+  "main": "./dist/main.js",
   "scripts": {
     "build": "rm -rf dist && npm run tailwind:css && webpack --mode production",
     "tailwind:css": "postcss src/tailwind.css -o src/index.css --env production",
